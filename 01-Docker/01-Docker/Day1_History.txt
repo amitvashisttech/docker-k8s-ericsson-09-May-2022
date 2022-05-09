@@ -1,0 +1,52 @@
+    1  hostname
+    2  hostname -i 
+    3  hostname -f
+    4  ip addr 
+    5  ping -c2 google.com 
+    6  free -m 
+    7  git clone https://github.com/amitvashisttech/docker-k8s-ericsson-09-May-2022.git
+    8  git clone https://github.com/amitvashisttech/docker-k8s-ericsson-25-April-2022.git
+    9  ls
+   10  mv docker-k8s-ericsson-25-April-2022 old 
+   11  ls
+   12  cd docker-k8s-ericsson-09-May-2022/
+   13  ls
+   14  cp -rf ../old/00-Vagrant-Setup . 
+   15  ls
+   16  cd 00-Vagrant-Setup/
+   17  ls
+   18  cat Vagrantfile 
+   19  ls
+   20  cd ..
+   21  ls
+   22  mkdir 01-Docker
+   23  cp -rf /root/old/01-Docker/00-Setup 01-Docker/
+   24  ls
+   25  cd 01-Docker/
+   26  ls
+   27  cd 00-Setup/
+   28  ls
+   29  vim install-docker.sh 
+   30  ls
+   31  ./install-docker.sh 
+   32  docker version 
+   33  vim install-docker.sh 
+   34  ls
+   35  cd 
+   36  ls
+   37  docker images 
+   38  docker run ubuntu echo "Hello World" 
+   39  docker container ls 
+   40  docker container ls -a 
+   41  docker images 
+   42  ls
+   43  cd docker-k8s-ericsson-09-May-2022/
+   44  ls
+   45  cd 01-Docker/
+   46  ls
+   47  mkdir 01-Docker
+   48  ls
+   49  cd 01-Docker/
+   50  ls
+   51  history 
+   52  history > Day1_History.txt 
