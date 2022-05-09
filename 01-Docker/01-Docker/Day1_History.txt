@@ -112,3 +112,106 @@
   112  cd 01-Docker/
   113  ls
   114  history > Day1_History.txt 
+  115  ls
+  116  cd ../../
+  117  ls
+  118  git add . ; git commit -m "01-Docker" ; git push 
+  119  echo "***************** Docker Commands ***********************"
+  120  docker images 
+  121  docker ps 
+  122  docker ps -a
+  123  docker rm 68de9f46870f
+  124  docker ps -a
+  125  docker ps 
+  126  docker ps -a
+  127  docker ps -aq
+  128  docker rm $(docker ps -aq) 
+  129  docker ps -a 
+  130  docker images 
+  131  docker rmi 5d592881faed
+  132  docker images 
+  133  docker run ubuntu:16.04 echo "Welcome to Docker."
+  134  docker ps 
+  135  docker ps -a 
+  136  docker run ubuntu:16.04 ping -c2 google.com
+  137  docker images 
+  138  docker ps -a 
+  139  docker run -it ubuntu:16.04 
+  140  docker ps 
+  141  docker ps -a 
+  142  docker run -it ubuntu:16.04 
+  143  docker ps -a 
+  144  docker run 1ec50d8dbc5b
+  145  docker start 1ec50d8dbc5b
+  146  docker ps 
+  147  docker ps -a 
+  148  docker attach  1ec50d8dbc5b
+  149  ls
+  150  docker ps 
+  151  docker start 1ec50d8dbc5b
+  152  docker ps 
+  153  docker attach 1ec50d8dbc5b
+  154  docker ps 
+  155  ls
+  156  docker ps 
+  157  docker run -itd ubuntu 
+  158  docker ps 
+  159  docker attach 3fe6f316576a
+  160  docker run -itd --name test-web-1 ubuntu 
+  161  docker ps 
+  162  docker rename sweet_khorana ping-test-1
+  163  docker ps 
+  164  docker inspect 0~ping-test-11~
+  165  docker inspect ping-test-1
+  166  docker inspect --format '{{.Name}} {{.State.Running}} {{NetworkSettings.IPAddress}}' ping-test-1
+  167  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' ping-test-1
+  168  docker ps -a 
+  169  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' ${docker ps -q}
+  170  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+  171  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' $(docker ps -qa)
+  172  docker ps 
+  173  docker kill $(docker ps -qa)
+  174  docker ps -a 
+  175  docker rm $(docker ps -qa)
+  176  docker ps -a 
+  177  ls
+  178  cd 01-Docker/
+  179  ls
+  180  cd 01-Docker/
+  181  s
+  182  ks
+  183  ls
+  184  history > Day1_History.txt 
+  185  cd ..
+  186  ls
+  187  cd ..
+  188  ls
+  189  docker run -it ubuntu 
+  190  docker run -itd ubuntu 
+  191  docker run  ubuntu echo "Test-1" 
+  192  docker ps 
+  193  docker ps -a 
+  194  docker images 
+  195  docker run -it busybox 
+  196  docker ps 
+  197  docker run -d amitvashist7/k8s-tiny-web
+  198  docker ps 
+  199  docker inspect bebbccd8e969
+  200  docker ps 
+  201  docker inspect 8784f0ac9e36
+  202  ls
+  203  docker run -itd --name test-1 ubuntu
+  204  docker ps 
+  205  docker run -d --name test-2 ubuntu
+  206  docker ps 
+  207  docker ps -a
+  208  docker exec -it test-1 ps -ef 
+  209  docker exec -it test-2 ps -ef 
+  210  docker exec -it lamboyant_poincare ps -ef 
+  211  docker exec -it 8784f0ac9e36 ps -ef 
+  212  ls
+  213  cd 01-Docker/
+  214  ls
+  215  cd 01-Docker/
+  216  ls
+  217  history > Day1_History.txt 
