@@ -50,3 +50,27 @@
    50  ls
    51  history 
    52  history > Day1_History.txt 
+   53  ls
+   54  cd ..
+   55  ls
+   56  cd ..
+   57  ls
+   58  git add . ; git commit -m "01-Docker" ; 
+   59  git push 
+   60  ls
+   61  cat /etc/resolv.conf 
+   62  docker ps 
+   63  docker version 
+   64  docker images 
+   65  docker run ubuntu echo "Welcome to the world of Docker.!"
+   66  docker container ls 
+   67  docker container ls -a
+   68  docker run ubuntu echo "Test - 1"
+   69  docker container ls -a
+   70  systemctl  status docker 
+   71  ls
+   72  cd 01-Docker/
+   73  ls
+   74  cd 01-Docker/
+   75  ls
+   76  history > Day1_History.txt 
