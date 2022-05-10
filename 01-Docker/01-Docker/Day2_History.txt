@@ -358,3 +358,77 @@
   358  history 
   359  ls
   360  history > 01-Docker/Day2_History.txt 
+  361  cd ..
+  362  ls
+  363  git add . ; git commit -m "01-Docker" ; git push 
+  364  ls
+  365  cd 01-Docker/
+  366  ls
+  367  cd 02-Dockerfile/
+  368  ls
+  369  mkdir python/v1 -p 
+  370  ls
+  371  cd python/v1/
+  372  ls
+  373  vim app.py 
+  374  ls
+  375  vim Dockerfile
+  376  vim req.txt 
+  377  ls
+  378  docker build -t mypythonwebapp:v1  .
+  379  docker images 
+  380  docker run -d mypythonwebapp:v1 
+  381  docker ps 
+  382  docker ps -a 
+  383  docker logs 5ab01784f4d7
+  384  ls
+  385  vim app.py 
+  386  docker build -t mypythonwebapp:v1  .
+  387  docker run -d mypythonwebapp:v1 
+  388  docker ps 
+  389  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' $(docker ps -qa)
+  390  curl 172.17.0.12
+  391  curl 172.17.0.12:8080
+  392  l
+  393  ls
+  394  docker images 
+  395  docker login 
+  396  docker push mypythonwebapp:v1 
+  397  docker tag mypythonwebapp:v1 amitvashist7/mypython-webapp-ericsson-10-may-2022:v1 
+  398  docker images 
+  399  docker push amitvashist7/mypython-webapp-ericsson-10-may-2022:v1
+  400  ls
+  401  cd ..
+  402  ls
+  403  cp -rf v1 v2 
+  404  ls
+  405  cd v2/
+  406  ls
+  407  > app.py 
+  408  vim app.py 
+  409  docker build -t amitvashist7/mypython-webapp-ericsson-10-may-2022:v2 . 
+  410  docker images 
+  411  docker run -d amitvashist7/mypython-webapp-ericsson-10-may-2022:v2 
+  412  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' $(docker ps -qa)
+  413  docker ps 
+  414  docker images 
+  415  docker ps -a 
+  416  docker logs c4dd0742221d
+  417  vim app.py 
+  418  docker build -t amitvashist7/mypython-webapp-ericsson-10-may-2022:v2 . 
+  419  docker run -d amitvashist7/mypython-webapp-ericsson-10-may-2022:v2 
+  420  docker ps 
+  421  curl 172.17.0.12:8080
+  422  curl 172.17.0.13:8080
+  423  curl 172.17.0.13:8080/hello
+  424  curl 172.17.0.13:8080/info
+  425  docker ps 
+  426  ls
+  427  cd ..
+  428  docker push amitvashist7/mypython-webapp-ericsson-10-may-2022:v2
+  429  ls
+  430  cd ..
+  431  ls
+  432  cd ..
+  433  ls
+  434  history > 01-Docker/Day2_History.txt 
