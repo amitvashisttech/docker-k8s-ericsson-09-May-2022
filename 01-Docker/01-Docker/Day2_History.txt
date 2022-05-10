@@ -1,3 +1,243 @@
+    1  hostname
+    2  hostname -i 
+    3  hostname -f
+    4  ip addr 
+    5  ping -c2 google.com 
+    6  free -m 
+    7  git clone https://github.com/amitvashisttech/docker-k8s-ericsson-09-May-2022.git
+    8  git clone https://github.com/amitvashisttech/docker-k8s-ericsson-25-April-2022.git
+    9  ls
+   10  mv docker-k8s-ericsson-25-April-2022 old 
+   11  ls
+   12  cd docker-k8s-ericsson-09-May-2022/
+   13  ls
+   14  cp -rf ../old/00-Vagrant-Setup . 
+   15  ls
+   16  cd 00-Vagrant-Setup/
+   17  ls
+   18  cat Vagrantfile 
+   19  ls
+   20  cd ..
+   21  ls
+   22  mkdir 01-Docker
+   23  cp -rf /root/old/01-Docker/00-Setup 01-Docker/
+   24  ls
+   25  cd 01-Docker/
+   26  ls
+   27  cd 00-Setup/
+   28  ls
+   29  vim install-docker.sh 
+   30  ls
+   31  ./install-docker.sh 
+   32  docker version 
+   33  vim install-docker.sh 
+   34  ls
+   35  cd 
+   36  ls
+   37  docker images 
+   38  docker run ubuntu echo "Hello World" 
+   39  docker container ls 
+   40  docker container ls -a 
+   41  docker images 
+   42  ls
+   43  cd docker-k8s-ericsson-09-May-2022/
+   44  ls
+   45  cd 01-Docker/
+   46  ls
+   47  mkdir 01-Docker
+   48  ls
+   49  cd 01-Docker/
+   50  ls
+   51  history 
+   52  history > Day1_History.txt 
+   53  ls
+   54  cd ..
+   55  ls
+   56  cd ..
+   57  ls
+   58  git add . ; git commit -m "01-Docker" ; 
+   59  git push 
+   60  ls
+   61  cat /etc/resolv.conf 
+   62  docker ps 
+   63  docker version 
+   64  docker images 
+   65  docker run ubuntu echo "Welcome to the world of Docker.!"
+   66  docker container ls 
+   67  docker container ls -a
+   68  docker run ubuntu echo "Test - 1"
+   69  docker container ls -a
+   70  systemctl  status docker 
+   71  ls
+   72  cd 01-Docker/
+   73  ls
+   74  cd 01-Docker/
+   75  ls
+   76  history > Day1_History.txt 
+   77  ls
+   78  cd ..
+   79  ls
+   80  cd ..
+   81  ls
+   82  git push 
+   83  vim /root/.bashrc 
+   84  source /root/.bashrc
+   85  git add . ; git commit -m "01-Docker" ; git push 
+   86  docker images 
+   87  docker pull amitvashist7/apache-ex4
+   88  docker login 
+   89  docker pull amitvashist7/apache-ex4
+   90  docker logout 
+   91  docker images 
+   92  docker pull amitvashist7/k8s-tiny-web
+   93  docker images 
+   94  ls
+   95  docker images 
+   96  docker run -it ubuntu cat /etc/os-release 
+   97  docker run  ubuntu cat /etc/os-release 
+   98  docker run ubuntu cat /etc/os-release 
+   99  docker run ubuntu:16.04 cat /etc/os-release 
+  100  docker images 
+  101  docker pull ubuntu:focal
+  102  docker images 
+  103  docker run ubuntu:focal cat /etc/os-release 
+  104  docker run ubuntu:20.04 cat /etc/os-release 
+  105  docker images 
+  106  ls
+  107  cd 01-Docker/
+  108  s
+  109  ls
+  110  docker ps -a 
+  111  ls
+  112  cd 01-Docker/
+  113  ls
+  114  history > Day1_History.txt 
+  115  ls
+  116  cd ../../
+  117  ls
+  118  git add . ; git commit -m "01-Docker" ; git push 
+  119  echo "***************** Docker Commands ***********************"
+  120  docker images 
+  121  docker ps 
+  122  docker ps -a
+  123  docker rm 68de9f46870f
+  124  docker ps -a
+  125  docker ps 
+  126  docker ps -a
+  127  docker ps -aq
+  128  docker rm $(docker ps -aq) 
+  129  docker ps -a 
+  130  docker images 
+  131  docker rmi 5d592881faed
+  132  docker images 
+  133  docker run ubuntu:16.04 echo "Welcome to Docker."
+  134  docker ps 
+  135  docker ps -a 
+  136  docker run ubuntu:16.04 ping -c2 google.com
+  137  docker images 
+  138  docker ps -a 
+  139  docker run -it ubuntu:16.04 
+  140  docker ps 
+  141  docker ps -a 
+  142  docker run -it ubuntu:16.04 
+  143  docker ps -a 
+  144  docker run 1ec50d8dbc5b
+  145  docker start 1ec50d8dbc5b
+  146  docker ps 
+  147  docker ps -a 
+  148  docker attach  1ec50d8dbc5b
+  149  ls
+  150  docker ps 
+  151  docker start 1ec50d8dbc5b
+  152  docker ps 
+  153  docker attach 1ec50d8dbc5b
+  154  docker ps 
+  155  ls
+  156  docker ps 
+  157  docker run -itd ubuntu 
+  158  docker ps 
+  159  docker attach 3fe6f316576a
+  160  docker run -itd --name test-web-1 ubuntu 
+  161  docker ps 
+  162  docker rename sweet_khorana ping-test-1
+  163  docker ps 
+  164  docker inspect 0~ping-test-11~
+  165  docker inspect ping-test-1
+  166  docker inspect --format '{{.Name}} {{.State.Running}} {{NetworkSettings.IPAddress}}' ping-test-1
+  167  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' ping-test-1
+  168  docker ps -a 
+  169  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' ${docker ps -q}
+  170  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+  171  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' $(docker ps -qa)
+  172  docker ps 
+  173  docker kill $(docker ps -qa)
+  174  docker ps -a 
+  175  docker rm $(docker ps -qa)
+  176  docker ps -a 
+  177  ls
+  178  cd 01-Docker/
+  179  ls
+  180  cd 01-Docker/
+  181  s
+  182  ks
+  183  ls
+  184  history > Day1_History.txt 
+  185  cd ..
+  186  ls
+  187  cd ..
+  188  ls
+  189  docker run -it ubuntu 
+  190  docker run -itd ubuntu 
+  191  docker run  ubuntu echo "Test-1" 
+  192  docker ps 
+  193  docker ps -a 
+  194  docker images 
+  195  docker run -it busybox 
+  196  docker ps 
+  197  docker run -d amitvashist7/k8s-tiny-web
+  198  docker ps 
+  199  docker inspect bebbccd8e969
+  200  docker ps 
+  201  docker inspect 8784f0ac9e36
+  202  ls
+  203  docker run -itd --name test-1 ubuntu
+  204  docker ps 
+  205  docker run -d --name test-2 ubuntu
+  206  docker ps 
+  207  docker ps -a
+  208  docker exec -it test-1 ps -ef 
+  209  docker exec -it test-2 ps -ef 
+  210  docker exec -it lamboyant_poincare ps -ef 
+  211  docker exec -it 8784f0ac9e36 ps -ef 
+  212  ls
+  213  cd 01-Docker/
+  214  ls
+  215  cd 01-Docker/
+  216  ls
+  217  history > Day1_History.txt 
+  218  cd ..
+  219  ls
+  220  git add . ; git commit -m "01-Docker" ; git push 
+  221  ls
+  222  docker run -it --name test-ping-1 ubuntu:16.04 
+  223  ping -c2 8.8.8.8 
+  224  ping -c2 google.com
+  225  vim /etc/resolv.conf 
+  226  ping -c2 google.com
+  227  docker ps 
+  228  docker ps -a 
+  229  docker start test-ping-1 
+  230  docker attach test-ping-1 
+  231  docker ps 
+  232  docker exec -it test-ping-1 ping -c2 google.com
+  233  ls
+  234  cd 01-Docker/
+  235  ls
+  236  cd 01-Docker/
+  237  ls
+  238  cat Day1_History.txt 
+  239  cd ..
+  240  ls
   241  mkdir 02-Dockerfile/apache -p 
   242  cd 02-Dockerfile/apache/
   243  ls
@@ -32,3 +272,89 @@
   272  cd 02-Dockerfile/
   273  ls
   274  history > ../01-Docker/Day2_History.txt 
+  275  ls
+  276  cd ..
+  277  ls
+  278  cd 01-Docker/
+  279  ls
+  280  vim Day2_History.txt 
+  281  ls
+  282  cd ..
+  283  ls
+  284  cd ..
+  285  ls
+  286  git add . ; git commit -m "01-Docker" ; git push 
+  287  ls
+  288  cd 01-Docker/02-Dockerfile/apache/
+  289  ls
+  290  cp -rf v1 v2 
+  291  ls
+  292  cd v2/
+  293  ls
+  294  vim Dockerfile 
+  295  ls
+  296  vim index.html
+  297  ls
+  298  mv Dockerfile apachefile
+  299  ls
+  300  docker build -t myapache-test:v2 .
+  301  docker build -t myapache-test:v2 -f apachefile .
+  302  docker images 
+  303  docker history 724ebd352d43
+  304  docker history 2d275d0ec5b2
+  305  ls
+  306  docker run -d --name test-apache-2 myapache-test:v2
+  307  docker ps 
+  308  curl 172.17.0.8
+  309  curl 172.17.0.9
+  310  docker ps 
+  311  curl -vvv 172.17.0.9
+  312  ls
+  313  cd ..
+  314  ls
+  315  cp -rf v2 v3 
+  316  ls
+  317  cd v3/
+  318  ls
+  319  vim apachefile 
+  320  ls
+  321  mv apachefile Dockerfile
+  322  vim index.html 
+  323  ls
+  324  docker build -t myapache-test:v2  .
+  325  docker images
+  326  docker tag eed99e96c44c myapache-test:v3 
+  327  docker images
+  328  docker tag 2d275d0ec5b2 myapache-test:v2
+  329  docker images
+  330  docker run -d --name test-apache-3 myapache-test:v3
+  331  docker ps 
+  332  curl -vvv 172.17.0.10:80
+  333  ls
+  334  cd ..
+  335  ls
+  336  cp -rf v3 v4 
+  337  ls
+  338  cd v4/
+  339  ;s
+  340  ls
+  341  vim Dockerfile 
+  342  docker build -t myapache-test:v4  .
+  343  docker run -d --name test-apache-4 myapache-test:v4
+  344  docker ps 
+  345  curl -vvv 172.17.0.11
+  346  curl -vvv 172.17.0.12
+  347  telent 172.17.0.11 80 
+  348  telnet 172.17.0.11 80 
+  349  telnet 172.17.0.11 3306
+  350  docker ps 
+  351  ls
+  352  cd ..
+  353  ls
+  354  cd ..
+  355  ls
+  356  cd ..
+  357  ls
+  358  history 
+  359  ls
+  360  history > 01-Docker/Day2_History.txt 
