@@ -432,3 +432,47 @@
   432  cd ..
   433  ls
   434  history > 01-Docker/Day2_History.txt 
+  435  ls
+  436  cd ..
+  437  ls
+  438  git push 
+  439  git add . ; git commit -m "01-Docker" ; git push 
+  440  docker ps 
+  441  docker network ls 
+  442  docker network inspect bridge
+  443  docker kill $(docker ps -q) 
+  444  docker ps 
+  445  docker network inspect bridge
+  446  docker ps 
+  447  docker ps -a 
+  448  docker start 32fb9f774d5d
+  449  curl 172.17.0.13:8080/info
+  450  docker network inspect bridge
+  451  curl 172.17.0.2:8080/info
+  452  curl localhost:8080
+  453  route -n 
+  454  netstat -tulnp 
+  455  docker run -d --name test-nw-1 -p 9090:8080 amitvashist7/mypython-webapp-ericsson-10-may-2022:v2 
+  456  netstat -tulnp 
+  457  docker ps 
+  458  systemctl status docker 
+  459  curl localhost:8080
+  460  netstat -tulnp 
+  461  curl localhost:9090
+  462  curl localhost:9090/info
+  463  docker ps 
+  464  docker run -d --name test-nw-2 -p 9090:8080 amitvashist7/mypython-webapp-ericsson-10-may-2022:v2 
+  465  docker run -d --name test-nw-3 -p 9091:8080 amitvashist7/mypython-webapp-ericsson-10-may-2022:v2 
+  466  netstat -tulnp 
+  467  docker run -d --name test-nw-4 -P amitvashist7/mypython-webapp-ericsson-10-may-2022:v2 
+  468  docker ps 
+  469  netstat -tulnp 
+  470  docker ps 
+  471  docker images 
+  472  docker run -d --name test-nw-5 -P myapache-test:v4 
+  473  docker ps 
+  474  history 
+  475  docker history amitvashist7/mypython-webapp-ericsson-10-may-2022:v2
+  476  docker ps 
+  477  ls
+  478  history > 01-Docker/01-Docker/Day2_History.txt 
