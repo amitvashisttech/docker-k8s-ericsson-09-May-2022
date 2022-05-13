@@ -3,14 +3,14 @@
 ## Install Nfs Server 
 ```
 apt-get install nfs-kernel-server -y 
-mkdir /exports
-chown nobody:nogroup /exports
+mkdir /myexports
+chown nobody:nogroup /myexports
 ```
 
 ## NFS Export Path & Share Config
 ```
 root@kube-master:~/k8s-paypal-28-Dec-2020/26-Volumes-NFS# grep -i exports /etc/exports
-/exports  *(rw,sync,no_subtree_check)
+/myexports  *(rw,sync,no_subtree_check)
 root@kube-master:~/k8s-paypal-28-Dec-2020/26-Volumes-NFS#
 ```
 
@@ -31,7 +31,7 @@ showmount -e localhost
 ## Install NFS Clinet Utils 
 ```
 apt-get install nfs-common -y
-mount -t nfs 172.31.0.100:/exports /mnt/
+mount -t nfs 172.31.0.10:/myexports /mnt/
 cd /mnt/
 hostname >> hostname.txt
 ```
