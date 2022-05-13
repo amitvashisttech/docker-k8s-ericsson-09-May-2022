@@ -14,10 +14,10 @@ Deploy 6 - 150
 
 =====================================>
 Deploy 1 -> SVC 1 (SelfCare ) -> NodePort : 32777 ( 50IPAddress ):32777
-Deploy 1 -> SVC 1 (PaymentAuth) -> NodePort : 32778 ( 100IPAddress ):32778
-Deploy 1 -> SVC 1 (PaymentCapture) -> NodePort : 32779 ( 200IPAddress ):32779
-Deploy 1 -> SVC 1 (Subcribtion) -> NodePort : 32780 ( 200IPAddress ):32780
-Deploy 1 -> SVC 1 (Notificaton ) -> NodePort : 32781 ( 200IPAddress ):32781
+Deploy 2 -> SVC 2 (PaymentAuth) -> NodePort : 32778 ( 100IPAddress ):32778
+Deploy 3 -> SVC 3 (PaymentCapture) -> NodePort : 32779 ( 200IPAddress ):32779
+Deploy 4 -> SVC 4 (Subcribtion) -> NodePort : 32780 ( 200IPAddress ):32780
+Deploy 5 -> SVC 5 (Notificaton ) -> NodePort : 32781 ( 200IPAddress ):32781
 
 
 =====================================>
@@ -44,9 +44,9 @@ http:
           serviceName: helloworld-v1
           servicePort: 80
 
-/SelfCare -> backend -> SVC 1 -> 32777 
-/PaymentAuth -> backend -> SVC 2 -> 32778
-/PaymentCapture -> backend -> SVC 3 -> 32779
+/SelfCare -> backend -> SVC 1 -> 80:32777 
+/PaymentAuth -> backend -> SVC 2 -> 80:32778
+/PaymentCapture -> backend -> SVC 3 -> 80:32779
 
 
 
